@@ -6,7 +6,7 @@
        state: touch
     - blockinfile:
        path: /ansible.txt
-       block:
+       block: |
          a
          b
          c
