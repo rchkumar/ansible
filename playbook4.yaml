@@ -23,8 +23,7 @@
 - name: This play will create the file
   hosts: dbserver
   tasks:
-    - name:
-      file:
+     file:
 	    path: /grras
    	    owner: root
   	    group: root
