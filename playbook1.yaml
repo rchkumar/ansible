@@ -1,23 +1,9 @@
----
-name: This playbook is going to install apache web server on managed hosts # name of the tasks
-
-hosts: dbserver  # all the managed servers
-
-tasks:
-
-  - yum:
-      name: ["httpd","bind-utils","nfs-utils"]
-      state: present
+- name: This play is about installing web server
+  hosts: dbserver
+  tasks:
+     - name: ensure apache is latest version
+       yum:
+          name: httpd
+          state: absent
+          
      
-  - service:
-      name: httpd
-      state: started
-      
-  - file:
-      path: /abc.txt
-      mode: "777"
-      owner: root
-      group: admin
-      
-      # play is ordered set of tasks which will run against the managed hosts.
-      # playbook is text file which contains one and more than plays.
