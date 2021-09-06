@@ -5,6 +5,7 @@
    - name: managing the file permissions
      file: 
         path: /etc/foo.conf
+        state: touch
         owner: root
         group: root
         mode: '0644'
