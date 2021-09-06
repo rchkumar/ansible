@@ -1,0 +1,12 @@
+---
+- hosts: dbserver
+  tasks:
+    - file:
+       path: /ansible.txt
+       state: touch
+    - blockinfile:
+       path: /ansible.txt
+       block:
+         a
+         b
+         c
