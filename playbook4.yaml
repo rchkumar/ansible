@@ -5,15 +5,3 @@
     - package:
          name: ntpdate
          state: present
-    - copy:
-        src: /srv/myfiles/foo.conf
-        state: touch
-        dest: /etc/foo.conf
-        owner: foo
-        group: foo
-        mode: '0644'
- 
-    - firewalld:
-        port: 8081/tcp
-    	permanent: yes
-        state: disabled
