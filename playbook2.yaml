@@ -1,0 +1,20 @@
+---
+- name: This play wil install httpd package and start the service of apache
+  hosts: dbserver
+  tasks:
+    - yum:
+       name: httpd
+       state: present
+    - service:
+       name: httpd
+       state: started
+
+- name: This play will install mysql package and start the service of mysql
+  hosts: dbserver
+  tasks: 
+    - yum:
+       name: mysql
+       state: present
+    - service:
+        name: mysqld
+        state: restarted
