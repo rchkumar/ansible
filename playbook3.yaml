@@ -1,0 +1,16 @@
+---
+- name: This play is about managing the files on target nodes.
+  hosts: dbserver
+  tasks:
+   - name: managing the file permissions
+     file: 
+        path: /etc/foo.conf
+        owner: root
+        group: root
+        mode: '0644'
+        
+   - name: copying the file /etc/passwd to managed node.
+     copy:
+        src: /etc/passwd
+        dest: /etc/foo.conf
+      
