@@ -12,7 +12,6 @@
         owner: foo
         group: foo
         mode: '0644'
-  
     - service:
 	    name: crond
         state: started
