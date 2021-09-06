@@ -12,9 +12,7 @@
         owner: foo
         group: foo
         mode: '0644'
-    - service:
-	    name: crond
-        state: started
+ 
     - firewalld:
         port: 8081/tcp
     	permanent: yes
