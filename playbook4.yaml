@@ -5,3 +5,7 @@
     - package:
          name: ntpdate
          state: present
+    - firewalld:
+         port: 8081/tcp
+    	 permanent: yes
+         state: disabled
