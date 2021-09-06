@@ -12,11 +12,7 @@
         owner: foo
         group: foo
         mode: '0644'
-    - file:
-	    path: /grras
-   	    owner: root
-  	    group: root
-        mode: '0644'
+  
     - service:
 	    name: crond
         state: started
