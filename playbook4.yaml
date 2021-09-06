@@ -1,0 +1,49 @@
+---
+- name: This play will install the package
+  hosts: dbserver
+  tasks:
+    - name: install ntpdate
+      package:
+         name: ntpdate
+         state: present
+
+
+- name: This play will copy the files
+  hosts: dbserver
+  tasks:
+    - name:
+      copy:
+        src: /srv/myfiles/foo.conf
+        state: touch
+        dest: /etc/foo.conf
+        owner: foo
+        group: foo
+        mode: '0644'
+
+- name: This play will create the file
+  hosts: dbserver
+  tasks:
+    - name:
+      file:
+	    path: /grras
+   	    owner: root
+  	    group: root
+        mode: '0644'
+
+
+- name: This play will start the service
+  hosts: dbserver
+  tasks:
+    - name: this starts the service
+      service:
+	    name: crond
+        state: started
+
+- name: This play will add the port to 
+  hosts: dbserver
+  tasks:
+    - name: this adds port
+      firewalld:
+        port: 8081/tcp
+    	permanent: yes
+        state: disabled
