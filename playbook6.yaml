@@ -8,6 +8,8 @@
     - copy:
          content: "This is my first web site"
          dest: /var/www/html/index.html
+      tags:
+        - contentcopy
          
     - service:
          name: httpd
