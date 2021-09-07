@@ -18,11 +18,17 @@
           permanent: yes
           state: enabled
           immeidate: yes
+       tags:
+         - ignore
+        
      - firewalld:
           port: 80/tcp
           permanent: yes
           state: enabled
           immeidate: yes
+       tags:
+          - ignore
+        
      - yum:
           name: nfs-utils
           state: present
