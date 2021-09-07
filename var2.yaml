@@ -4,4 +4,4 @@
     - name: install a package
       lineinfile:
         path: /kubernetes.txt
-        line: '"{{name}}" is a good person'
+        line: '"{{name1}}" is a good person'
