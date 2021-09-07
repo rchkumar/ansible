@@ -4,7 +4,7 @@
     - name: install a package
       yum:
         name: "{{package_name}}"
-        state:
+        state: present
     - name: start the service
       service:
         name: "{{package_name}}"
