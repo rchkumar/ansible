@@ -1,0 +1,10 @@
+---
+- hosts: dbserver
+  vars_files:
+    - vairables.yaml
+  tasks:
+    - name: install a package
+      lineinfile:
+        path: /kubernetes.txt
+        line: 'Now a days {{name1}} is {{name2}}'
+        
