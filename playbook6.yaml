@@ -1,4 +1,5 @@
 ---
+# configuring web server
 - hosts: dbserver
   tasks:
     - yum:
@@ -12,3 +13,12 @@
          name: httpd
          status: started
          enabled: yes
+         
+ # checking if it is working fine or not.
+ 
+- hosts: dbserver
+  tasks:
+    - uri:
+         url:  http://managednode1
+         return_content: yes
+         status_code: 200
