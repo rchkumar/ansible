@@ -27,7 +27,7 @@
           state: enabled
           immeidate: yes
        tags:
-          - ignore
+          - ignore1
         
      - yum:
           name: nfs-utils
