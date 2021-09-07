@@ -7,31 +7,31 @@
           owner: root
           group: root
           mode: '7777'
-      - lineinfile:
-           path: "/kubernetes.txt"
-           line: "This is something"
-      - service:
-           name: httpd
-           state: restarted
-      - firewalld:
-           service: http
-           permanent: yes
-           state: enabled
-           immeidate: yes
-      - firewalld:
-           port: 80/tcp
-           permanent: yes
-           state: enabled
-           immeidate: yes
-      - yum:
-           name: nfs-utils
-           state: present
-      - lineinfile:
-            path: /etc/exports
-            line: '/data *(rw,sync,no_root_squash)'
-      - service:
-            name: nfs-server
-            state: started
+     - lineinfile:
+          path: "/kubernetes.txt"
+          line: "This is something"
+     - service:
+          name: httpd
+          state: restarted
+     - firewalld:
+          service: http
+          permanent: yes
+          state: enabled
+          immeidate: yes
+     - firewalld:
+          port: 80/tcp
+          permanent: yes
+          state: enabled
+          immeidate: yes
+     - yum:
+          name: nfs-utils
+          state: present
+     - lineinfile:
+          path: /etc/exports
+          line: '/data *(rw,sync,no_root_squash)'
+     - service:
+          name: nfs-server
+          state: started
             
             
   
