@@ -1,0 +1,11 @@
+---
+- hosts: dbserver
+  tasks:
+    - name: install a package
+      yum:
+        name: "{{package_name}}"
+        state:
+    - name: start the service
+      service:
+        name: "{{package_name}}"
+        state: started
