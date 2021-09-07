@@ -1,10 +1,10 @@
 ---
 - hosts: dbserver
+  vars:
+   - name1: gaurav
   tasks:
     - name: install a package
       lineinfile:
         path: /kubernetes.txt
         line: '"{{name1}}" is a good person'
         
-
-#ansible-playbook var2.yaml -e name1=sachin
