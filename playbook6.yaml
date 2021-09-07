@@ -1,0 +1,14 @@
+---
+- hosts: dbserver
+  tasks:
+    - yum:
+         name: httpd
+         state: latest
+    - copy:
+         content: "This is my first web site"
+         dest: /var/www/html/index.html
+         
+    - service:
+         name: httpd
+         status: started
+         enabled: yes
