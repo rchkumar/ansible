@@ -9,3 +9,6 @@
       service:
         name: "{{package_name}}"
         state: started
+        
+
+# ansible-playbook var1.yaml -e package_name=nginx      >> you need to provide package name during command execution.
