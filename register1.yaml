@@ -4,5 +4,8 @@
     - name: create a file
       service: 
         name: crond
-        state: started
-        
+        state: restarted
+      register: service_status
+    
+    - debug:
+        var: service_status
