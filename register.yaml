@@ -9,4 +9,4 @@
       
     - name: I am going to print the put register inside a variable
       debug:
-         var: khusal
+         var: khushal.diff.after.mtime
