@@ -3,7 +3,7 @@
   tasks:
     - name: print something
       debug:
-        msg: The value is {{name}} and in {{city}}
+        msg: The value is {{name}}
         
         
         
