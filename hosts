@@ -1,17 +1,15 @@
 [dbserver]
 
-192.168.0.117 ansible_user=gaurav name=managedserverfirst
+192.168.0.117 ansible_user=gaurav 
 
 [webserver]
 
-192.168.0.118 ansible_user=bharat name=managedserversecond
+192.168.0.118 ansible_user=bharat 
 
 [prodserver:children]
 dbserver
 webserver
 
-[prodserver:vars]
-city=udaypur
 
 
 
