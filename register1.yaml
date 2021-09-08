@@ -7,4 +7,4 @@
         state: restarted
       register: service_status
     - debug:
-        var: service_status
+        var: service_status.status.ActiveState
