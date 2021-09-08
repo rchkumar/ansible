@@ -1,6 +1,6 @@
 ---
 - hosts: dbserver
-  name:
+  #name:
   tasks:
     - name: print something
       debug:
