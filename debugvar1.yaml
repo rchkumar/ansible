@@ -1,7 +1,9 @@
 ---
 - hosts: dbserver
-  #name:
   tasks:
     - name: print something
       debug:
         msg: The value is {{name}}
+        
+        
+        
