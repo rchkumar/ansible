@@ -3,4 +3,4 @@
   tasks:
    - name: print something
      debug: 
-       msg: "{{ansible_all_ipv4_addresses[0]}}"
+       msg: "{{ansible_local.date_time}}"
