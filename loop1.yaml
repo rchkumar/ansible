@@ -4,4 +4,4 @@
    - name: install a package
      yum:
        name: ["httpd","bind-utils","nfs-utils"]
-       status: latest
+       state: latest
