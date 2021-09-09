@@ -1,6 +1,9 @@
 ---
 - hosts: all
   tasks: 
+   - name: add a group
+     group:
+       name: cycle
    - name: add a user
      user:
       name: "{{item.name}}"
