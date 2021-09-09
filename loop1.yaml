@@ -5,3 +5,12 @@
      yum:
        name: ["httpd","bind-utils","nfs-utils"]
        state: latest
+   - name: copy five files into a directory
+     copy:
+      src: 
+        - /a.txt
+        - /b.txt
+        - /c.txt
+      dest: /boot
+        
+        
