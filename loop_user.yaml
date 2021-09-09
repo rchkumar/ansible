@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks: 
+   - name: add a user
+     user:
+      name: "{{item.name}}"
+      group: "{{item.group}}"
+     loop:
+       - name: ramesh
+         group: wheel
+       - name: shyam
+         group: cycle
