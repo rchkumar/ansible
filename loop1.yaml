@@ -7,10 +7,12 @@
        state: latest
    - name: copy five files into a directory
      copy:
-      src: 
-        - /a.txt
-        - /b.txt
-        - /c.txt
+      src: "{{item}}"
       dest: /boot
+     loop:
+       - /a.txt
+       - /b.txt
+       - /c.txt
+       
         
         
