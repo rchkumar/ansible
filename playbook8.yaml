@@ -3,4 +3,4 @@
   tasks:
    - name: print something
      debug: 
-       var: "{{ansible_all_ipv4_addresses}}"
+       var: "{{ansible_all_ipv4_addresses[0]}}"
