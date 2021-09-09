@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+   - name: print something
+     command: "echo {{item}}"
+     loop:
+       - one
+       - two
+     register: newoutput
+     
+   - name: print the register
+     debug:
+       var: newoutput
