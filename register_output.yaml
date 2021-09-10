@@ -1,0 +1,10 @@
+---
+- hosts: prodserver
+  tasks:
+   - name: install httpd
+     service: 
+       name: httpd
+       state: restarted
+     register: service_output
+     
+   - debug: var=service_output
