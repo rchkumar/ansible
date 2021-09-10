@@ -15,7 +15,13 @@
    - copy:
         src: 1.conf
         dest: /etc/httpd/conf.d/1.conf
+     notify: restart_service
         
    - service:
        name: httpd
        state: started
+  handlers:
+   - name: restart_service
+     service:
+       name: httpd
+       state: restarted
