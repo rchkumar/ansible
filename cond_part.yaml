@@ -6,6 +6,7 @@
        device: /dev/nvme0n1
        number: 2
        state: present
+       part_start: 
        part_end: 10MiB
-     when: ansible_devices.xvda.size <= "8.00 GB"
+     when: ansible_devices.nvme0n1.size <= "8.00 GB"
      
