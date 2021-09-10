@@ -6,4 +6,4 @@
        name: mariadb-server
        state: latest
      loop: "{{ansible_mounts}}"
-     when: item.count == "/" and item.size_available < "12323942423423"
+     when: item.mount == "/" and item.size_available < "12323942423423"
