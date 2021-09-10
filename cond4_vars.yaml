@@ -1,0 +1,18 @@
+---
+- hosts: all
+  vars:
+   package_name: 
+      - RedHat
+      - Ubuntu
+  tasks:
+   - name: install httpd
+     yum:
+      name: httpd
+      state: present
+     when: ansible_distribution in package_name
+     
+   - name: install apache2
+     yum:
+      name: apache2
+      state: present
+     when: ansible_distribution in package_name
