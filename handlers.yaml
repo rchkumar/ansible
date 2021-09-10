@@ -10,7 +10,7 @@
        
    - copy:
        src: index.html
-       dest: /var/www/html
+       dest: /var/www/webserver
        
    - copy:
         src: 1.conf
