@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: install package
+      yum:
+        name: httpd
+        state: present
+      loop: "{{ansible_mounts}}"
+      when: item.fstype=="xfs" and
+            item.mount=="/" and
+            item.size_available<="13304385536"
