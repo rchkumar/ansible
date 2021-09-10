@@ -5,4 +5,4 @@
      yum:
       name: httpd
       state: present
-     when: ansible_memtotal_mb > "4000"
+     when: ansible_memtotal_mb < "4000"
