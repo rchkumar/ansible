@@ -1,10 +1,10 @@
 ---
 - hosts: prodserver
-  vars:
-    package_name: httpd
+  #vars:
+   # package_name: httpd
   tasks:
    - name: install httpd
      yum:
       name: httpd
       state: present
-     when: package_name is defined
+     when: ansible_devices.nvme0n1 is defined
