@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    package_name: httpd
+  tasks:
+   - name: install httpd
+     yum:
+      name: httpd
+      state: present
+     when: package_name is defined
