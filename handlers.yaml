@@ -4,6 +4,9 @@
    - yum:
        name: httpd
        state: present
+   - file:
+      path: /var/www/webserver
+      state: directory
        
    - copy:
        src: index.html
