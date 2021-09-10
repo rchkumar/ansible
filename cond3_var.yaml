@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: prodserver
   vars:
     package_name: httpd
   tasks:
