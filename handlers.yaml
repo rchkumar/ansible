@@ -1,0 +1,18 @@
+---
+- hosts:
+  tasks:
+   - yum:
+       name: httpd
+       state: present
+       
+   - copy:
+       src: index.html
+       dest: /var/www/html
+       
+   - copy:
+        src: 1.conf
+        dest: /etc/httpd/conf.d/1.conf
+        
+   - service:
+       name: httpd
+       state: started
