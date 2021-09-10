@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+   - name: install httpd
+     yum:
+      name: httpd
+      state: present
+     when: ansible_distribution == "RedHat" 
+     
+   - name: install httpd
+     apt:
+      name: apache2
+      state: present
+     when: ansible_distribution == "Ubuntu" 
