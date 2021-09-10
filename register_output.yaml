@@ -8,3 +8,8 @@
      register: service_output
      
    - debug: var=service_output
+   
+   - name: print a msg
+     debug :
+       msg : service is active
+     when: service_output.status.ActiveState == "active"
