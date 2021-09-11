@@ -3,4 +3,6 @@
   tasks:
     - name: print something
       command: echo hello
-      
+      register: output
+    - debug:
+       var: output
