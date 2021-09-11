@@ -3,5 +3,5 @@
   tasks:
    - name: print something
      lineinfile:
-      path: /grras.txt
+      path: c.txt
       line: my ip is {{ansible_default_ipv4.address}} and my hostname is {{ansible_hostname}}
