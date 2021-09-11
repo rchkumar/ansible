@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+   - name: print something
+     lineinfile:
+      path: /grras.txt
+      line: my ip is {{ansible_default_ipv4.address}} and my hostname is {{ansible_hostname}}
