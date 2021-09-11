@@ -1,10 +1,14 @@
 ---
 - hosts: all
   tasks:
-    - name: print something
-      command: echo hello
-      register: output
-    - fail:
-       msg: "failed"
-      when: output.changed == "true"
-   
+   - name: copy a file
+     copy:
+       src: users.sh
+       dest: /usr/user.sh
+       mode: '0777'
+   - name: print something
+     shell: /usr/users.sh
+     register: output
+     failed_when: output.changed == "true"
+   - debug:
+      var: output
