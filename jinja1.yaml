@@ -2,6 +2,6 @@
 - hosts: all
   tasks:
    - name: copy a file
-     copy:
+     template:
        src: info.txt
        dest: /info.txt
