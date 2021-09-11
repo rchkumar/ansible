@@ -6,6 +6,5 @@
       register: output
     - fail:
        msg: "failed"
-      when: output.changed="true"
-    - debug:
-       var: output
+      when: output.changed == "true"
+   
