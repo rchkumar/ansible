@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: copy a file
+      template:
+        src: motd.j2
+        dest: /etc/motd
