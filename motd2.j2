@@ -1,0 +1,3 @@
+{% for value in ansible_python.version_info %}
+{{ value }} , and the index is {{loop.index}}
+{% endfor %}
