@@ -1,3 +1,4 @@
 {% for value in ansible_interfaces if not value == "lo"  %}
 {{ value }} 
 {% endfor %}
+
