@@ -1,1 +1,3 @@
-value is : {{ ansible_proc_cmdline.console }}
+{% for value in ansible_python.version_info %}
+{{ value }}
+{% endfor %}
