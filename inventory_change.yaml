@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: copy
+      template: 
+        src: inventory.txt.j2
+        dest: inventory2.txt
