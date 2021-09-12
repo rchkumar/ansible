@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: prodserver
   tasks:
     - name: copy a file
       template:
