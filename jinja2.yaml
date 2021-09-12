@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    - name: kushal
+    - msg: hi
+  tasks:
+    - name: copy a file
+      template:
+        src: info.txt
+        dest: /info.txt

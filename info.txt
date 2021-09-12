@@ -1,1 +1,2 @@
-my ip is {{ansible_default_ipv4.address}} and my hostname is {{ansible_hostname}}
+name is {{name}}
+msg is {{msg}}
