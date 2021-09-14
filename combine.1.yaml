@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: run a task
+      yum:
+       name: httpd
+       state: present
+       
+    - import_tasks: bharat_tasks.yaml
+    
+- name: run the tasks
+  import_playbook: one.yaml
+- name: run the tasks
+  import_playbook: two.yaml

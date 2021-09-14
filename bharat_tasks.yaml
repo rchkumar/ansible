@@ -1,0 +1,7 @@
+- name: print hello
+  debug:
+    msg: hi
+- name: print hi
+  debug:
+    msg: hello
+    
