@@ -1,0 +1,5 @@
+192.168.0.105 ansible_user=bharat
+1.1.1.1 ansible_user=bharat
+2.2.2.2 ansible_user=bharat
+192.168.0.117 ansible_user=bharat
+192.168.0.118 ansible_user=bharat
