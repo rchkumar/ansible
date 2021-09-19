@@ -5,7 +5,7 @@
    state: present
    
 - name: copy a file to managed server
-  copy:
+  ansible.builtin.copy:
    src: index.html
    dest: "{{documentroot}}"
    
