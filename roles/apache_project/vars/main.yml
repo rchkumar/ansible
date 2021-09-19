@@ -5,3 +5,4 @@ package_name: httpd
 service_name: httpd
 state: restarted
 documentroot: /var/www/html
+apache_port: 81
