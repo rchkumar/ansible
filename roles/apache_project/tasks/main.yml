@@ -1,15 +1,20 @@
 ---
   - name: Install apache packages 
     yum:
-      name: httpd
+      name: "{{package_name}}"
       state: present
-  - name: ensure httpd is running
+  - name:  copy a httpd.conf by changing it with jinja2
+    template:
+      src: httpd.conf.j2
+      dest: /et/httpd/conf/httpd.conf
+  
+  - name: ensure "{{package_name}}" is running
     service:
       name: httpd 
       state: started
   - name: Open port 80 for http access
     firewalld:
-      service: http
+      service: "{{package_name}}"
       permanent: true
       state: enabled
   - name: Restart the firewalld service to load in the firewall changes
