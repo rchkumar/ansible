@@ -6,7 +6,7 @@
   - name:  copy a httpd.conf by changing it with jinja2
     template:
       src: httpd.conf.j2
-      dest: /et/httpd/conf/httpd.conf
+      dest: /etc/httpd/conf/httpd.conf
   
   - name: ensure "{{package_name}}" is running
     service:
