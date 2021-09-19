@@ -1,2 +1,7 @@
 ---
 # vars file for apache_project
+
+package_name: httpd
+service_name: httpd
+state: restarted
+documentroot: /var/www/html

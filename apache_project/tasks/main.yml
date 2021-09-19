@@ -1,2 +1,41 @@
 ---
+- name: Install a package
+  yum:
+   name: "{package_name}"
+   state: present
+   
+- name: copy a file to managed server
+  copy:
+   src: index.html
+   dest: "{{documentroot}}"
+   
+- name: start the service
+  service:
+   name: "{{service_name}}"
+   state: "{{state}}"
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # tasks file for apache_project
