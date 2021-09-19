@@ -8,11 +8,15 @@
   ansible.builtin.copy:
    src: index.html
    dest: "{{documentroot}}"
+  ignore_errors: yes
    
 - name: start the service
   service:
    name: "{{service_name}}"
    state: "{{state}}"
+  
+- apache_project
+   
    
 
 
