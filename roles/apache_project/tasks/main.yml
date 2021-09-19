@@ -7,7 +7,7 @@
 - name: copy a file to managed server
   copy:
    src: index.html
-   dest: '"{{documentroot}}"/index.html'
+   dest: "{{documentroot}}"
    
 - name: start the service
   service:

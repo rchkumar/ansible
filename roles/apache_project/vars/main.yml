@@ -4,4 +4,4 @@
 package_name: httpd
 service_name: httpd
 state: restarted
-documentroot: /var/www/html
+documentroot: /var/www/html/index.html
