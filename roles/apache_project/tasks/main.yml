@@ -1,23 +1,39 @@
 ---
-- name: Install a package
-  yum:
-   name: "{{package_name}}"
-   state: present
-   
-- name: copy a file to managed server
-  ansible.builtin.copy:
-   src: index.html
-   dest: "{{documentroot}}"
-  ignore_errors: yes
-   
-- name: start the service
-  service:
-   name: "{{service_name}}"
-   state: "{{state}}"
+  - name: Install apache packages 
+    yum:
+      name: httpd
+      state: present
+  - name: ensure httpd is running
+    service:
+      name: httpd 
+      state: started
+  - name: Open port 80 for http access
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+  - name: Restart the firewalld service to load in the firewall changes
+    service: 
+      name: firewalld 
+      state: restarted
 
-- name: Check that you can connect (GET) to a page and it returns a status 200
-  uri:
-    url: http://localhost:80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#- name: Check that you can connect (GET) to a page and it returns a status 200
+ # uri:
+  #  url: http://localhost:80
    
    
 
