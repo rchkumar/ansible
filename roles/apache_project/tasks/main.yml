@@ -17,6 +17,10 @@
       service: http
       permanent: true
       state: enabled
+  - firewalld:
+      port: 81/tcp
+      permanent: true
+      state: enabled
   - name: Restart the firewalld service to load in the firewall changes
     service: 
       name: firewalld 
