@@ -16,6 +16,10 @@
     service: 
       name: firewalld 
       state: restarted
+  - name: copy the index file 
+    copy:
+      src: index.html
+      dest:  /var/www/html
 
 
 
