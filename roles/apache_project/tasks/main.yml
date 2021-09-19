@@ -14,8 +14,7 @@
   service:
    name: "{{service_name}}"
    state: "{{state}}"
-  
-- apache_project
+
    
    
 
